@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dea8a4;
+    background-image: url(https://cdn.pixabay.com/photo/2016/02/09/19/57/aurora-1190254_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+h1{ font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 800; /*deixa em negrito*/
+    font-size: 4em;
+    transition: 1s;
+
+}
+header h1:hover{
+    color: #20cb3f;
+    box-shadow: black 20px 20px 20px 10px;
+    transition-duration: 1s;
+
+}
+
+.container{
+    margin-top: 2%;
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*mexe no Eixo*/
+}
+.container:hover{
+    box-shadow: rgb(0, 0, 0) 20px 20px 20px 10px;
+    transition-duration: 1s;
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+input{
+    display: none;
+}
+
+.bar{
+    background-color: #ffffff;
+    width: 30px;
+    height: 25px;
+    border-radius: 25px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bar:hover{
+    background-color: #2f7a45;
+    transform: translateY(-3px);
+    transition-duration: 1s;
+    box-shadow: 10px 10px 10px black;
+}
+
+.navegacao{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
+}
+
+.imagens{
+    display: flex;
+    height: 100%;
+    width: 800%;
+
+}
+
+.imagem{
+    transition: all 1s ease-in-out;
+    width: 16.6666666667%;
+}
+
+#imagem1:checked ~.img1{
+    margin-left: 0;
+    }
+#imagem2:checked ~ .img1{
+    margin-left:-16.6666666667%;
+    }
+#imagem3:checked ~ .img1{
+    margin-left:-33.3333333333%;
+    }
+#imagem4:checked ~ .img1{
+    margin-left:-50%;
+    }
+#imagem5:checked ~ .img1{
+    margin-left:-66.6666666667%;
+    }
+#imagem6:checked ~ .img1{
+    margin-left:-83.3333333333%;
+    }
+#imagem7:checked ~ .img1{
+    margin-left:-100%;
+    }
+#imagem8:checked ~ .img1{
+    margin-left:-116.666666669%;
+    }
+
+    footer{
+        /* justify-content: center; */
+        /* text-align: center;  */
+        position: absolute;
+        color: rgb(255, 255, 255);
+        bottom: 0;
+        left: 37%;
+        display: flex;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+
+    footer:hover{
+        background-color: #256a32;
+        transform: translateY(-3px);
+        transition-duration: 1s;
+        box-shadow: 10px 10px 10px black;
+        padding: 5px;
+    }
+
+    @media(max-width:480px){
+        body{
+            margin: 0;
+            padding: 0;
+            /* background-color: #dea8a4; */
+            background-image: url(https://cdn.pixabay.com/photo/2016/02/09/19/57/aurora-1190254_1280.jpg);
+            /* background-repeat: repeat; */
+            background-size: 300%;
+            /* background-position: center; */
+           /* width: 100%; */
+        }
+        header h1{
+            padding: 2%;
+            text-align: center;
+            display: flex;
+            font-size: 50px;
+        }
+        .container{
+            margin-top: 2%;
+            height: 50vh;
+            width: 58vh;
+        }
+        footer{
+            left: 0%;
+            font-size: 1.2rem;
+        }
+       
+    }
+
+
+    @media(max-width:768px){
+        header {
+            padding: 2%;
+            text-align: center;
+            display: flex;
+            font-size: 0.9rem;
+        }
+        .container{
+            margin-top: 2%;
+            height: 50vh;
+            width: 68vh;
+        }
+        footer{
+            font-size: 1.2rem;
+        }
+       
+    }
+
